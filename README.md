@@ -1,70 +1,25 @@
-# Getting Started with Create React App
+# PennyMac React coding test
+## Ken McKaba
+### ken@mckaba.com
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I attempted to utilize, for the first time, [Chakra-UI](https://chakra-ui.com/
+) for styling.
 
-## Available Scripts
+It is a popular CSS-in-JS component library that makes styling React apps with accessibility, responsiveness, custom themes and light/dark modes.
 
-In the project directory, you can run:
+I've been wanting to master it so I studied the Chakra docs for a while earlier, felt confident, and decided to use it in this effort, hoping to impress myself and you.
 
-### `yarn start`
+Unfortunately it did slow me down significantly and I did not complete everthing I wanted to implement in spite of spending more like 6 hours. I spent too much time figuring out how to configure a custom theme for the colors and styles your mockups showed.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+My app only has the show search capabilities but does not show episodes. There are layout shortcomings too.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+I would have added API error handling and some tweaks to the UI and some unit tests using Jest and react-testing-utils. It has a switch to choose light and dark color modes, however the dark mode needs some tweaking. Also, the responsiveness needs work.
 
-### `yarn test`
+I, of course, realize now that starting a timed coding test with a new technology was risky. In my experience when picking up new tools and technologies 1 or 2 people should spend the time to master it, then present the subject, and a working model, to the rest of the team and stakeholders.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+If I could start this coding test knowing what I now know of Chakra-UI, I'm confident I would have all the features including responsiveness for phones, tablets and desktop, light/dark modes, etc.
 
-### `yarn build`
+I'm grateful for the opportunity to interview and try the test. I hope you can find a spot for me there where I can help you out.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thanks!
+Ken
