@@ -8,7 +8,7 @@ import {
   Image,
   VStack,
 } from '@chakra-ui/react'
-import { shape } from 'prop-types'
+import { func, shape } from 'prop-types'
 import { QuestionIcon } from '@chakra-ui/icons'
 
 function image(show) {
@@ -25,12 +25,12 @@ function image(show) {
   }
   return (
     <Flex h="100%" w="270px" bg="gray.400" borderRadius="8px" ml="5">
-      <QuestionIcon color="white" w="50" h="50" margin="auto" />
+      <QuestionIcon color="white" boxSize="8" margin="auto" />
     </Flex>
   )
 }
 
-export default function Show({ showInfo }) {
+export default function Show({ showInfo, handleShowClick }) {
   const { show } = showInfo
 
   const cleanSummary = (str) => {
@@ -41,8 +41,18 @@ export default function Show({ showInfo }) {
 
   const summary = cleanSummary(show.summary)
 
+  const handleClick = () => {
+    handleShowClick(show)
+  }
+
   return (
-    <Flex h="15em" w="100%" pos="relative">
+    <Flex
+      h="15em"
+      w="100%"
+      pos="relative"
+      onClick={handleClick}
+      cursor="pointer"
+    >
       <Flex
         bgColor="brand.shade"
         h="80%"
@@ -67,4 +77,5 @@ export default function Show({ showInfo }) {
 
 Show.propTypes = {
   showInfo: shape({}).isRequired,
+  handleShowClick: func.isRequired,
 }
