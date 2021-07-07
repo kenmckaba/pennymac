@@ -1,9 +1,11 @@
+/* eslint-disable prettier/prettier */
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react'
+import { DebounceInput } from 'react-debounce-input'
 import {
   Button,
   Flex,
   HStack,
-  Input,
   VStack,
   Spinner,
   useToast,
@@ -19,6 +21,7 @@ import {
 import { SearchIcon } from '@chakra-ui/icons'
 import searchShows from '../api/search-shows'
 import ShowList from './ShowList'
+import CoolButton from './CoolButton'
 
 export default function SearchBox() {
   const [searchTerm, setSearchTerm] = useState('')
@@ -38,10 +41,6 @@ export default function SearchBox() {
     })
   }
 
-  const onChange = (val) => {
-    setSearchTerm(val.target.value)
-  }
-
   // just to demonstrate the loading appearance
   const onShowLoading = ({ target: { checked } }) => {
     setIsLoading(checked)
@@ -56,10 +55,10 @@ export default function SearchBox() {
     setModalShow(null)
   }
 
-  const doSearch = async () => {
+  const doSearch = async (term) => {
     try {
       setIsLoading(true)
-      const results = await searchShows(searchTerm)
+      const results = await searchShows(term)
       setIsLoading(false)
       setSearchResults(results)
     } catch (error) {
@@ -68,6 +67,11 @@ export default function SearchBox() {
       setSearchResults([])
       doErrorToast()
     }
+  }
+
+  const onChange = (val) => {
+    setSearchTerm(val.target.value)
+    doSearch(val.target.value)
   }
 
   return (
@@ -82,9 +86,17 @@ export default function SearchBox() {
             borderRadius="8px"
           >
             <SearchIcon marginLeft="5" />
-            <Input placeholder="Search show titles" onChange={onChange} />
+            <DebounceInput
+              placeholder="Search show titles"
+              onChange={onChange}
+              minLength={2}
+              debounceTimeout={1000}
+            />
+            {/* <Input placeholder="Search show titles" onChange={onChange} /> */}
           </Flex>
-          <Button onClick={doSearch}>Search</Button>
+          <CoolButton variant="large" isLoading={isLoading} onClick={doSearch}>
+            Search
+          </CoolButton>
         </HStack>
         {
           // controls to test isLoading and isApiError handling

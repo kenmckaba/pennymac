@@ -3,7 +3,7 @@ import { extendTheme } from '@chakra-ui/react'
 // 37, 57, 94   25, 39, 5e
 const config = {
   initialColorMode: 'light',
-  useSystemColorMode: false,
+  useSystemColorMode: true,
   colors: {
     brand: {
       main: '#25395e',
